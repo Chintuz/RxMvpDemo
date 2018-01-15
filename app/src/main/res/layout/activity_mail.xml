@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/main_layout"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/t3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Let’s we discuss some important methods of ViewSwitcher that may be called in order to manage the ImageSwitcher."/>
+
+        <TextView
+            android:layout_below="@+id/t3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_margin="10dp"
+            android:text="This method is used to show the next view of ViewSwitcher. As we discussed earlier ViewSwitcher can only have two child views of which only one is shown at a time, so this method is used to show the next views."/>
+
+
+        <Button
+            android:id="@+id/my_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:layout_alignParentBottom="true"
+            android:onClick="onSlideViewButtonClick" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/my_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/t1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="In Android, ViewSwitcher is a sub class of ViewAnimator that is used for switching between views. It is an element of transition widget which helps us to add transitions on the views. It is mainly useful to animate a view on screen. ViewSwitcher switches smoothly between two views (i.e. TextView, ImageView or any layout) and thus provides a way of transitioning from one view to another through appropriate animations. You can create views for a ViewSwitcher widget either using a factory or by adding them on your own."/>
+
+        <TextView
+            android:layout_below="@+id/t1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_margin="10dp"
+            android:text=" ViewSwitcher can only have two child views of which only one is shown at a time. If you have more than two child views in ViewSwitcher, java.lang.IllegalStateException of “Can’t add more than 2 views to a ViewSwitcher” error will come."/>
+
+        <Button
+                android:id="@+id/my_button_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="onSlideViewButtonClick"
+                android:layout_alignParentBottom="true"
+                android:text="123" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
