@@ -67,8 +67,6 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.layout_login);
         ButterKnife.bind(this);
         DaggerActivityComponent.builder().applicationComponent(MyApp.getApplicationComponent()).activityModule(new ActivityModule(this)).build().inject(this);
-        Log.e("Susu", "Dhdh");
-        Log.e("Susu", "Dhdh");
     }
 
     @OnClick(R.id.login)
