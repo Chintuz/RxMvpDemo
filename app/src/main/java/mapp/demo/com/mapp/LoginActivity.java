@@ -10,6 +10,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.view.ContextThemeWrapper;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
@@ -57,9 +58,8 @@ public class LoginActivity extends Activity {
 
     @BindView(R.id.login_response)
     TextView loginResponseTv;
-
-    private ProgressDialog mProgressDialog;
     @Inject NetworkApis apis;
+    private ProgressDialog mProgressDialog;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -67,7 +67,7 @@ public class LoginActivity extends Activity {
         setContentView(R.layout.layout_login);
         ButterKnife.bind(this);
         DaggerActivityComponent.builder().applicationComponent(MyApp.getApplicationComponent()).activityModule(new ActivityModule(this)).build().inject(this);
-
+        Log.e("Susu", "Dhdh");
     }
 
     @OnClick(R.id.login)
